@@ -114,7 +114,7 @@ export default {
                      <h3 class="popular__name">Modern Light</h3>
                      <span class="popular__subtitle">Hanging Light</span>
                      <h3 class="popular__price">
-                        <span>$</span>14
+                        <span>Rp </span>1.800.000
                      </h3>
 
                      <button class="popular__button">
@@ -130,7 +130,7 @@ export default {
                      <h3 class="popular__name">Industrial Light</h3>
                      <span class="popular__subtitle">Hanging Light</span>
                      <h3 class="popular__price">
-                        <span>$</span>20
+                        <span>Rp </span>20
                      </h3>
 
                      <button class="popular__button">
@@ -146,7 +146,7 @@ export default {
                      <h3 class="popular__name">Superbolw Light</h3>
                      <span class="popular__subtitle">Hanging Light</span>
                      <h3 class="popular__price">
-                        <span>$</span>18
+                        <span>Rp </span>1.800.000
                      </h3>
 
                      <button class="popular__button">
@@ -162,7 +162,7 @@ export default {
                      <h3 class="popular__name">Ultrawide Light</h3>
                      <span class="popular__subtitle">Hanging Light</span>
                      <h3 class="popular__price">
-                        <span>$</span>16
+                        <span>Rp </span>1.800.000
                      </h3>
 
                      <button class="popular__button">
@@ -178,7 +178,7 @@ export default {
                      <h3 class="popular__name">Roundness Light</h3>
                      <span class="popular__subtitle">Hanging Light</span>
                      <h3 class="popular__price">
-                        <span>$</span>17
+                        <span>Rp </span>1.800.000
                      </h3>
 
                      <button class="popular__button">
