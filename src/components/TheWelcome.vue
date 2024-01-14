@@ -1,88 +1,204 @@
-<script setup lang="ts">
-import WelcomeItem from './WelcomeItem.vue'
-import DocumentationIcon from './icons/IconDocumentation.vue'
-import ToolingIcon from './icons/IconTooling.vue'
-import EcosystemIcon from './icons/IconEcosystem.vue'
-import CommunityIcon from './icons/IconCommunity.vue'
-import SupportIcon from './icons/IconSupport.vue'
+<script>
+import homeLamp from '@/assets/frontend/assets/img/home-lamp.png';
+import modernLamp from '@/assets/frontend/assets/img/modern-lamp.png';
+import industrialLamp from '@/assets/frontend/assets/img/industrial-lamp.png';
+import superbowlLamp from '@/assets/frontend/assets/img/Superbowl-lamp.png';
+import ultrawideLamp from '@/assets/frontend/assets/img/Ultrawide-lamp.png';
+import roundnessLightLamp from '@/assets/frontend/assets/img/Roundness-light.png';
+
+export default {
+  data() {
+    return {
+      imageHomeLamp: homeLamp,
+      imageModernLamp: modernLamp,
+      imageIndustrialLamp: industrialLamp,
+      imageSuperbowlLamp: superbowlLamp,
+      imageUltrawideLamp: ultrawideLamp,
+      imageRoundnessLightLamp: roundnessLightLamp,
+    };
+  },
+};
 </script>
 
 <template>
-  <WelcomeItem>
-    <template #icon>
-      <DocumentationIcon />
-    </template>
-    <template #heading>Documentation</template>
 
-    Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
-  </WelcomeItem>
+      <!--==================== HOME ====================-->
+      <section class="home section" id="home">
+         <div class="home__bg"></div>
 
-  <WelcomeItem>
-    <template #icon>
-      <ToolingIcon />
-    </template>
-    <template #heading>Tooling</template>
+         <div class="home__container container grid">
+            <div class="home__content grid">
+               <div class="home__data">
+                  <h3 class="home__subtitle">
+                     The best light bulbs
+                  </h3>
 
-    This project is served and bundled with
-    <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>. The
-    recommended IDE setup is
-    <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a> +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">Volar</a>. If
-    you need to test your components and web pages, check out
-    <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress</a> and
-    <a href="https://on.cypress.io/component" target="_blank" rel="noopener"
-      >Cypress Component Testing</a
-    >.
+                  <h1 class="home__title">
+                     Unique Light <br>
+                     For You Home
+                  </h1>
 
-    <br />
+                  <div class="home__buttons">
+                     <a href="#" class="button">
+                        Discover Now
+                     </a>
 
-    More instructions are available in <code>README.md</code>.
-  </WelcomeItem>
+                     <a href="#" class="button__link">
+                        <i class="ri-play-circle-line"></i> Watch Video
+                     </a>
+                  </div>
+               </div>
 
-  <WelcomeItem>
-    <template #icon>
-      <EcosystemIcon />
-    </template>
-    <template #heading>Ecosystem</template>
+               <div class="home__info">
+                  <div>
+                     <h3 class="home__info-title">
+                        9K<span>+</span>
+                     </h3>
+                     <span class="home__info-subtitle">
+                        Premium <br> Product
+                     </span>
+                  </div>
 
-    Get official tools and libraries for your project:
-    <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>,
-    <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a>,
-    <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener">Vue Test Utils</a>, and
-    <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener">Vue Dev Tools</a>. If
-    you need more resources, we suggest paying
-    <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Awesome Vue</a>
-    a visit.
-  </WelcomeItem>
+                  <div>
+                     <h3 class="home__info-title">
+                        2K<span>+</span>
+                     </h3>
+                     <span class="home__info-subtitle">
+                        Happy <br> Customer
+                     </span>
+                  </div>
 
-  <WelcomeItem>
-    <template #icon>
-      <CommunityIcon />
-    </template>
-    <template #heading>Community</template>
+                  <div>
+                     <h3 class="home__info-title">
+                        28<span>+</span>
+                     </h3>
+                     <span class="home__info-subtitle">
+                        Awards <br> Winning
+                     </span>
+                  </div>
+               </div>
+            </div>
 
-    Got stuck? Ask your question on
-    <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Vue Land</a>, our official
-    Discord server, or
-    <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank" rel="noopener"
-      >StackOverflow</a
-    >. You should also subscribe to
-    <a href="https://news.vuejs.org" target="_blank" rel="noopener">our mailing list</a> and follow
-    the official
-    <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">@vuejs</a>
-    twitter account for latest news in the Vue world.
-  </WelcomeItem>
+            <div class="home__image">
+               <div class="home__blob">
+                  <img :src="imageHomeLamp" alt="home image" class="home__img" >
+                  <h1 class="home__blob-title">
+                     LIGHT
+                  </h1>
+               </div>
 
-  <WelcomeItem>
-    <template #icon>
-      <SupportIcon />
-    </template>
-    <template #heading>Support Vue</template>
+               <div class="home__shadow"></div>
+            </div>
+         </div>
+      </section>
 
-    As an independent project, Vue relies on community backing for its sustainability. You can help
-    us by
-    <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
-  </WelcomeItem>
+      <!--==================== POPULAR ====================-->
+      <section class="popular section" id="popular">
+         <div class="popular__container container">
+            <div class="popular__data">
+               <h2 class="section__title">Popular Product</h2>
+
+               <p class="popular__description">
+                  Find our best products faster and get the
+                  quality lights we have for you.
+               </p>
+            </div>
+
+            <div class="popular__content grid swiper">
+               <div class="swiper-wrapper">
+                  <article class="popular__card swiper-slide">
+                     <div class="popular__blob">
+                        <img :src="imageModernLamp" alt="popular image" class="popular__img">
+                     </div>
+
+                     <h3 class="popular__name">Modern Light</h3>
+                     <span class="popular__subtitle">Hanging Light</span>
+                     <h3 class="popular__price">
+                        <span>$</span>14
+                     </h3>
+
+                     <button class="popular__button">
+                        <i class="ri-add-line"></i>
+                     </button>
+                  </article>
+
+                  <article class="popular__card swiper-slide">
+                     <div class="popular__blob">
+                        <img :src="imageIndustrialLamp" alt="popular image" class="popular__img">
+                     </div>
+
+                     <h3 class="popular__name">Industrial Light</h3>
+                     <span class="popular__subtitle">Hanging Light</span>
+                     <h3 class="popular__price">
+                        <span>$</span>20
+                     </h3>
+
+                     <button class="popular__button">
+                        <i class="ri-add-line"></i>
+                     </button>
+                  </article>
+
+                  <article class="popular__card swiper-slide">
+                     <div class="popular__blob">
+                        <img :src="imageSuperbowlLamp" alt="popular image" class="popular__img">
+                     </div>
+
+                     <h3 class="popular__name">Superbolw Light</h3>
+                     <span class="popular__subtitle">Hanging Light</span>
+                     <h3 class="popular__price">
+                        <span>$</span>18
+                     </h3>
+
+                     <button class="popular__button">
+                        <i class="ri-add-line"></i>
+                     </button>
+                  </article>
+
+                  <article class="popular__card swiper-slide">
+                     <div class="popular__blob">
+                        <img :src="imageUltrawideLamp" alt="popular image" class="popular__img">
+                     </div>
+
+                     <h3 class="popular__name">Ultrawide Light</h3>
+                     <span class="popular__subtitle">Hanging Light</span>
+                     <h3 class="popular__price">
+                        <span>$</span>16
+                     </h3>
+
+                     <button class="popular__button">
+                        <i class="ri-add-line"></i>
+                     </button>
+                  </article>
+
+                  <article class="popular__card swiper-slide">
+                     <div class="popular__blob">
+                        <img :src="imageRoundnessLight" alt="popular image" class="popular__img">
+                     </div>
+
+                     <h3 class="popular__name">Roundness Light</h3>
+                     <span class="popular__subtitle">Hanging Light</span>
+                     <h3 class="popular__price">
+                        <span>$</span>17
+                     </h3>
+
+                     <button class="popular__button">
+                        <i class="ri-add-line"></i>
+                     </button>
+                  </article>
+               </div>
+
+               <!-- Navigation buttons -->
+               <div class="swiper-button-prev">
+                  <i class="ri-arrow-left-s-line"></i>
+               </div>
+
+               <div class="swiper-button-next">
+                  <i class="ri-arrow-right-s-line"></i>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      
+
 </template>
