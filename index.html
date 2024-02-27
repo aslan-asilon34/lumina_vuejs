@@ -1,39 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina</title>
-    
-    
-   <!--=============== SWIPER CSS ===============-->
-   <link rel="stylesheet" href="src/assets/frontend/assets/css/swiper-bundle.min.css">
 
-   <!--=============== CSS ===============-->
-   <link rel="stylesheet" href="src/assets/frontend/assets/css/styles.css">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== FAVICON ===============-->
+   <link rel="shortcut icon" href="/public/img/favicon.png" type="image/x-icon">
 
    <!--=============== REMIXICONS ===============-->
    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+   <!--=============== SWIPER CSS ===============-->
+   <link rel="stylesheet" href="/public/css/swiper-bundle.min.css">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="/public/css/styles.css">>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+
+   <title>Lumina Shop</title>
+
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/main.js"></script>
 
-    
-   <!--========== SCROLL UP ==========-->
-   <a href="#" class="scrollup" id="scroll-up">
-      <i class="ri-arrow-up-line"></i>
-   </a>
 
    <!--=============== SCROLLREVEAL ===============-->
-   <script src="src/assets/frontend/assets/js/scrollreveal.min.js"></script>
+   <script src="public/js/scrollreveal.min.js"></script>
 
    <!--=============== SWIPER JS ===============-->
-   <script src="src/assets/frontend/assets/js/swiper-bundle.min.js"></script>
+   <script src="public/js/swiper-bundle.min.js"></script>
 
    <!--=============== MAIN JS ===============-->
-   <script src="src/assets/frontend/assets/js/main.js"></script>
+   <script src="public/js/main.js"></script>
 
-  </body>
+
+
+<script>
+  function countTo(target, end, duration) {
+    const element = document.getElementById(target);
+    const start = 0;
+    const range = end - start;
+    const increment = end > start ? 1 : -1;
+    const stepTime = Math.abs(Math.floor(duration / range));
+
+    let current = start;
+
+    const interval = setInterval(() => {
+      current += increment;
+      element.textContent = current + "+";
+
+      if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+        clearInterval(interval);
+      }
+    }, stepTime);
+  }
+
+  window.onload = function () {
+    countTo("premiumProductCount", 210, 100); // 2000 milliseconds (2 seconds) duration
+    countTo("happyCustomerCount", 9500, 1000); // 2000 milliseconds (2 seconds) duration
+    countTo("awardWinningCount", 9500, 100); // 2000 milliseconds (2 seconds) duration
+  };
+</script>
+
+
+
+<!-- ==================================  GSAP -->
+
+
+  <!-- Ionicons Usage -->
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <!-- ScrollMagic CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js" integrity="sha512-xAxjKW1J/R4TFytv43xvQ7jFTrJlBzsDOH/Aw0fFc2nvarQkE3d08lTicjzUsZJYDoHYDCpwsUUqOJXh34A1sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/PixiPlugin.min.js" integrity="sha512-n5YlUC0L2bmI5Bt2yZKgnLlJpgPQCeaE2KKgBfgAJ53c6h4MeZA96Vs5QKND27owYmIIfOsYGF2BPM3VW3CN3w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js" integrity="sha512-pLJlXRr/H5t+k+Tjc+Qe0Z6u6psPak7rvYBdsZ0Z+kG84jn/zifMNTQBZKZlwZC1z23bifGoQWzGnI0eWBJKPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js" integrity="sha512-lhK7xTsFM6DPXOtQQyPe+NmpoFEheKDHjM/5QzpFRiE1KySgtBfEzYz4XowvB+CAWcBLBGWinhh41uNaOtrSZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/EaselPlugin.min.js" integrity="sha512-i5d9zswMBppmXShWCFABEr9WqUMmD55mQ1u7PA7eXqdtd+HAD8Pe76SwWwkXRH7d3t9Xqv3fWi3jhlvNsKYDQQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js" integrity="sha512-G7Wpe/pbg+zjyyM9HgQY6kacLAy+580lmA8DUXmZtioTI5FkaCRoLOaCLoeblrZABs7KZFD03cfSV9j7nmwxfw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js" integrity="sha512-4a56NRIrhn/ePBdSSNfwsmL+eZt/uCXEb7s+3B8tg/tDiywDMKb5u2QCdhsYQtEkUMPGE5GUVbZYqgKeRzJ7yQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CSSRulePlugin.min.js" integrity="sha512-IxxYrSNXnt/RJlxNX40+7BQL88FLqvdpVpuV9AuvpNH/NFP0L8xA8WLxWTXx6PYExB5R/ktQisp6tIrnLn8xvw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  const { innerHeight } = window;
+
+   gsap.from('#zoom-out h2',{
+      scale:10,stager:0.10, duration: 1,
+      scrollTrigger : {
+         trigger: "#zoom-out h2",
+         pin:false,
+         end:`+=${innerHeight * 0.7}`,
+         scrub:5
+      }
+   });
+
+   gsap.to('#zoom-in h2',{
+      scale:5,stager:0.10, duration: 1,
+      scrollTrigger : {
+         trigger: "#zoom-in h2",
+         pin:false,
+         end:`+=${innerHeight * 0.7}`,
+         scrub:5
+      }
+   }); 
+
+
+</script>
+
+
+<script>
+   import gsap  from "gsap-trial";
+   import { SplitText } from "gsap-trial/SplitText";
+   import { ScrollTrigger } from "gsap-trial/ScrollTrigger";
+
+   gsap.registerPlugin(SplitText);
+
+   let mySplitText = new SplitText(".split",{type:"chars"})
+
+   let chars = mySplitText.chars 
+
+   gsap.from(chars, {
+      yPercent:130;,
+      stagger:0.05
+   })
+
+</script>
+
+
+<!-- ================================== END GSAP -->
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var languageSelector = document.getElementById('languageSelector');
+
+
+      // Add an event listener to handle changes in the selected option
+      languageSelector.addEventListener('change', function() {
+        var selectedOption = this.options[this.selectedIndex];
+        var url = selectedOption.getAttribute('data-href');
+        if (url !== "#") {
+          window.location.href = url;
+        }
+
+      });
+    });
+  </script>
+
+
+</body>
+
 </html>
